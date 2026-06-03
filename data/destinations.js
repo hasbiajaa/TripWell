@@ -470,7 +470,7 @@ export const TEAM_CATEGORIES = [
         prodi: 'Sistem Informasi',
         initials: 'AS',
         color: '#1a5c28',
-        photo: '/aset/images/team/annisa_foto.png',
+        photo: '/aset/images/team/Annisa_foto.png',
         linkedin: 'https://www.linkedin.com/in/annisasahindar-28a1753b0/',
         instagram: 'https://www.instagram.com/rlansh__?igsh=MXBpY2N0YXY4dmg5',
         github: 'https://github.com/sahindarannisa-pixel/',
