@@ -16,7 +16,8 @@ export async function POST(req) {
       destination_name, 
       review_text, 
       ai_label, 
-      ai_confidence 
+      ai_confidence,
+      photo_url 
     } = await req.json();
 
     // Get internal user ID from email using Supabase SDK
