@@ -163,24 +163,28 @@ const uploadPhoto = async (file) => {
 };
 
   const handleSubmit = async () => {
-try {
-  const [photo, setPhoto] = useState(null);
+    try {
+      setIsSubmitting(true); // Mengaktifkan loading tombol
+      
       let photoUrl = null;
-       if (photo) {
-          photoUrl = await uploadPhoto(photo);
-}
-      await fetch('/api/reviews', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    destination_id: String(dest?.id || 'unknown'),
-    destination_name: dest?.name || 'Unknown Destination',
-    review_text: reviewText,
-    ai_label: aiResult?.label || 'unclassified',
-    ai_confidence: aiResult?.confidence || 0,
-    photo_url: photoUrl,
-  }),
-});
+      // Langsung pakai variabel photo dari state atas (baris 54), tidak perlu di-useState lagi di sini
+      if (photo) {
+        photoUrl = await uploadPhoto(photo);
+      }
+
+      // Sekarang fetch-nya ditampung ke variabel bernama 'response'
+      const response = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          destination_id: String(dest?.id || 'unknown'),
+          destination_name: dest?.name || 'Unknown Destination',
+          review_text: reviewText,
+          ai_label: aiResult?.label || 'unclassified',
+          ai_confidence: aiResult?.confidence || 0,
+          photo_url: photoUrl,
+        }),
+      });
 
       if (response.ok) {
         alert('✅ Ulasan Anda berhasil dikirim ke Supabase! Terima kasih!');
@@ -194,10 +198,10 @@ try {
       console.error("Submit error:", error);
       alert('❌ Terjadi kesalahan jaringan saat mengirim ulasan.');
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false); // Mematikan loading tombol
     }
   };
-
+  
   if (!isOpen) return null;
 
   return (
