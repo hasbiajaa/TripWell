@@ -503,7 +503,7 @@ export const TEAM_CATEGORIES = [
         prodi: 'Sistem Informasi',
         initials: 'MH',
         color: '#d97706',
-        photo: '/aset/images/team/hasbi_foto.jpeg',
+        photo: '/aset/images/team/Hasbi_foto.jpeg',
         linkedin: 'https://www.linkedin.com/in/muhasbiramadhani/',
         instagram: 'https://www.instagram.com/rmdhnhasbi_?igsh=MnI4eDI1cjl5cHMy',
         github: 'https://github.com/hasbiajaa',
