@@ -54,7 +54,15 @@ export function LoginModal({ isOpen, onClose }) {
 }
 
 /* =================== REVIEW MODAL =================== */
-export function ReviewModal({ isOpen, onClose, dest, modelApiUrl = 'http://127.0.0.1:5000/predict', onSuccess }) {
+export function ReviewModal({ 
+  isOpen, 
+  onClose, 
+  dest, 
+  modelApiUrl = process.env.NEXT_PUBLIC_API_AI_URL 
+    ? `${process.env.NEXT_PUBLIC_API_AI_URL}/predict` 
+    : 'http://127.0.0.1:5000/predict', 
+  onSuccess 
+}) {
   const [reviewText, setReviewText] = useState('');
   const [aiResult, setAiResult] = useState(null);
   const [aiLoading, setAiLoading] = useState(false);
