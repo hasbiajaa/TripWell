@@ -35,6 +35,13 @@ CC26-PSU116
 | Rumaisya | Full-Stack Developer | Active |
 | Annisa Sahindar | Full-Stack Developer | Active |
 
+## Video
+
+  | Presentasi | Demo |
+  ----------|---------
+ [Presentation Video](https://youtu.be/q__M4EfqY2U) | [Demo Video](https://youtu.be/lDdIHNFOMr4) 
+
+
 ---
 
 # Background
