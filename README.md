@@ -102,6 +102,80 @@ Dropout
 Output Layer (Sigmoid)
 ```
 ---
+Cara Menjalankan Aplikasi
+Aplikasi TripWell terdiri dari 3 bagian yang perlu dijalankan secara terpisah.
+
+Prasyarat
+Pastikan perangkat sudah terinstal:
+ToolVersiPython3.10+Node.js18+npm9+
+
+1. AI Engineer – Flask AI API
+bash# Masuk ke folder ai-engineer
+cd TripWell/ai-engineer/app
+
+# Install dependencies
+pip install -r ../requirements.txt
+
+# Jalankan Flask API
+python predict.py
+AI API akan berjalan di http://localhost:5000
+Endpoint yang tersedia:
+
+POST /predict — mengklasifikasikan teks ulasan
+GET /health — mengecek status server
+
+
+2. Data Science – Streamlit Dashboard
+bash# Masuk ke folder data-science
+cd TripWell/data-science
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Jalankan dashboard
+streamlit run dashboard.py
+Dashboard akan terbuka di http://localhost:8501
+
+3. Full-Stack – Next.js Web Application
+Langkah 1 – Setup Environment Variables
+Buat file .env.local di dalam folder fullstack/:
+env# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Google OAuth (via NextAuth)
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+# NextAuth
+NEXTAUTH_SECRET=your_random_secret_string
+NEXTAUTH_URL=http://localhost:3000
+
+# URL AI API (arahkan ke Flask server yang sedang berjalan)
+NEXT_PUBLIC_API_AI_URL=http://localhost:5000
+Langkah 2 – Setup Database
+
+Buat project baru di https://supabase.com
+Buka SQL Editor di dashboard Supabase
+Jalankan script dari file cloud-database/schema.sql untuk membuat tabel yang dibutuhkan
+
+Langkah 3 – Install dan Jalankan
+bash# Masuk ke folder fullstack
+cd TripWell/fullstack
+
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+Web app akan berjalan di http://localhost:3000
+
+Ringkasan Menjalankan Semua Service
+Buka 3 terminal terpisah, lalu jalankan masing-masing:
+TerminalServicePerintahPortTerminal 1AI API (Flask)cd TripWell/ai-engineer/app && python predict.py5000Terminal 2Dashboard (Streamlit)cd TripWell/data-science && streamlit run dashboard.py8501Terminal 3Web App (Next.js)cd TripWell/fullstack && npm run dev3000
+
+⚠️ Pastikan AI API (Terminal 1) sudah berjalan terlebih dahulu sebelum membuka web app, agar fitur klasifikasi ulasan secara real-time dapat berfungsi dengan baik.
+---
 
 # <div align="center">Presented By :</div>
 
