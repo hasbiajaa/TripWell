@@ -214,6 +214,10 @@ Buka **3 terminal terpisah**, lalu jalankan masing-masing:
  
 > ⚠️ **Pastikan AI API (Terminal 1) sudah berjalan terlebih dahulu sebelum membuka web app**, agar fitur klasifikasi ulasan secara real-time dapat berfungsi dengan baik.
 ---
+## Link Drive Model AI
+https://drive.google.com/drive/folders/1cGS-OuZXDVINKzgCbOOyU1Cb-3sqMM38?usp=sharing 
+
+---
 
 # <div align="center">Presented By :</div>
 
