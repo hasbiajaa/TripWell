@@ -133,8 +133,9 @@ Output Layer (Sigmoid)
 
 ### Model Deployment
 
-* Flask
-* Pickle
+* Flask API
+* Railway
+* TensorFlow/Keras
 
 ### Development Environment
 
