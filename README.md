@@ -43,7 +43,7 @@ CC26-PSU116
 
 | Presentasi | Demo | PPT |
 | :--- | :--- | :--- |
-| [Presentation Video](https://youtu.be/q__M4EfqY2U) | [Demo Video](https://youtu.be/lDdIHNFOMr4) | [PPT Slide](https://canva.link/cyd7t8p47910n0a) |
+| [Presentation Video](https://youtu.be/q__M4EfqY2U) | [Demo Video](https://youtu.be/lDdIHNFOMr4) | [PPT Slide](https://canva.link/rjv8927136k0enh) |
 
 ---
 
